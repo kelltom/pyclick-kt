@@ -11,8 +11,8 @@ class HumanCurve():
     """
 
     def __init__(self, fromPoint, toPoint, **kwargs):
-        self.fromPoint = fromPoint
-        self.toPoint = toPoint
+        self.fromPoint = (int(fromPoint[0]), int(fromPoint[1]))
+        self.toPoint = (int(toPoint[0]), int(toPoint[1]))
         self.points = self.generateCurve(**kwargs)
 
     def generateCurve(self, **kwargs):
